@@ -17,14 +17,14 @@ public class ImportExcelTest {
                 "test.xls",
                 new FileInputStream("/Users/yjj/Desktop/test.xls"),
                 ImportExcel.getMap(keyValue),
-                "com.mbc.common.utils.excel.model.PhoneModelExcelTest", 1);
+                "com.hl.common.utils.excel.model.PhoneModelExcelTest", 1);
         System.out.println(list.size());
         //导出
         ImportExcel.exportExcel(
                 "导出数据",
                 new FileOutputStream("/Users/yjj/Desktop/testOut.xls"),
                 ImportExcel.getMap(keyValue), list,
-                "com.mbc.common.utils.excel.model.PhoneModelExcelTest", null, null, null);
+                "com.hl.common.utils.excel.model.PhoneModelExcelTest", null, null, null);
     }
 
 
