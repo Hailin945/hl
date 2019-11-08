@@ -12,23 +12,25 @@ import java.util.*;
  */
 public abstract class AbstractPoiExcel<T> implements PoiInterface<T> {
     /**
-     * EXCEL版本支持：03与07
-     *         0 EXCEL_VERSION_03
-     *         1 EXCEL_VERSION_07
-     *
-     *
-     *         （普通JavaBean）
-     *         -1 导出EXCEL文件（无分页）
-     *         -2 分页导出默认文件
-     *
-     *         （Map结构）
-     *         -5 导出默认样式EXCEL文件
+     * Excel 03版
      */
-    public static int EXCEL_VERSION_03 = 0;
-    public static int EXCEL_VERSION_07 = 1;
-
-    public static int EXPORT_SIMPLE_EXCEL = -1;
-    public static int EXPORT_MAP_EXCEL = -5;
+    public static final int EXCEL_VERSION_03 = 0;
+    /**
+     * Excel 07版
+     */
+    public static final int EXCEL_VERSION_07 = 1;
+    /**
+     * 导出EXCEL文件（无分页）（普通JavaBean）
+     */
+    public static final int EXPORT_SIMPLE_EXCEL = -1;
+    /**
+     * 分页导出默认文件
+     */
+    public static final int EXPORT_PAGE_EXCEL = -2;
+    /**
+     * 导出默认样式EXCEL文件（Map结构）
+     */
+    public static final int EXPORT_MAP_EXCEL = -5;
 
     // 表头--标题栏
     protected Map<Integer, String> getHeadersNameMap(List<String> headersName) {
