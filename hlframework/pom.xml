@@ -15,6 +15,7 @@
         <module>hl-eureka-8103</module>
         <module>hl-zipkin-8200</module>
         <module>hl-zuul-8300</module>
+        <module>hl-activemq-8400</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
