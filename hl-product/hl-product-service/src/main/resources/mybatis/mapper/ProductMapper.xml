@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.hl.dao.product.service.mapper.ProductMapper">
+    <update id="update">
+        UPDATE
+            tb_product
+        SET
+            num = #{num}
+        WHERE
+            id = #{id}
+    </update>
+
+    <!--    <select id="get" resultMap="ProductResultMap">-->
+    <select id="get" resultType="com.hl.dao.product.api.dataobject.ProductDO">
+        SELECT
+            id, num
+        FROM
+            tb_product
+        WHERE
+            id = #{id}
+    </select>
+
+    <resultMap id="ProductResultMap" type="com.hl.dao.product.api.dataobject.ProductDO">
+        <id property="id" column="id"/>
+        <result property="num" column="num"/>
+    </resultMap>
+</mapper>

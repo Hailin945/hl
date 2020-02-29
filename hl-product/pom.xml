@@ -12,20 +12,20 @@
     </parent>
 
     <groupId>com.hl</groupId>
-    <artifactId>school</artifactId>
+    <artifactId>hl-product</artifactId>
+    <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
 
     <modules>
-        <module>hl-school-service</module>
-        <module>hl-school-api</module>
+        <module>hl-product-api</module>
+        <module>hl-product-service</module>
     </modules>
 
-    <packaging>pom</packaging>
     <!-- 统一版本管理 -->
     <properties>
-        <mybatis-spring-boot-starter.version>2.0.0</mybatis-spring-boot-starter.version>
-        <druid-spring-boot-starter.version>1.1.13</druid-spring-boot-starter.version>
-        <spring-cloud-dependencies.version>Greenwich.RELEASE</spring-cloud-dependencies.version>
+        <mybatis-spring-boot-starter-version>2.0.0</mybatis-spring-boot-starter-version>
+        <druid-spring-boot-starter-version>1.1.13</druid-spring-boot-starter-version>
+        <spring-cloud-dependencies-version>Greenwich.RELEASE</spring-cloud-dependencies-version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -33,7 +33,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud-dependencies.version}</version>
+                <version>${spring-cloud-dependencies-version}</version>
                 <!-- 以下type标签和scope标签是为了解决maven单继承的问题 -->
                 <type>pom</type>
                 <scope>import</scope>
@@ -42,13 +42,13 @@
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
-                <version>${mybatis-spring-boot-starter.version}</version>
+                <version>${mybatis-spring-boot-starter-version}</version>
             </dependency>
             <!-- durid -->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-starter</artifactId>
-                <version>${druid-spring-boot-starter.version}</version>
+                <version>${druid-spring-boot-starter-version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -61,4 +61,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
